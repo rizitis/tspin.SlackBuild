@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.
+# Line up the first '|' above the ':' following the base package name, and
+# the '|' on the right side marks the last column you can put a character in.
+# You must make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':' except on otherwise blank lines.
+
+        |-----handy-ruler------------------------------------------------------|
+tailspin: tailspin (A log file highlighter )
+tailspin:
+tailspin: View (or tail) any log file of any format
+tailspin: No setup or config required
+tailspin: Highlights numbers, dates, IP-addresses, UUIDs, URLs and more
+tailspin: All highlight groups are customizable
+tailspin: Easy to integrate with other commands
+tailspin: Uses less under the hood for scrollback, search and filtering
+tailspin: 
+tailspin: https://github.com/bensadeh/tailspin
+tailspin:

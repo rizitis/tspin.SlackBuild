@@ -1,0 +1,96 @@
+'\" t
+.\"     Title: tspin
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.20
+.\"      Date: 2023-11-12
+.\"    Manual: tailspin
+.\"    Source: tailspin 2.1.0
+.\"  Language: English
+.\"
+.TH "TSPIN" "1" "2023-11-12" "tailspin 2.1.0" "tailspin"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NAME"
+tspin \- A log file highlighter
+.SH "SYNOPSIS"
+.sp
+\fBtspin\fP [\fIOPTION\fP]... [\fIFILE\fP|\fIFOLDER\fP]...
+.SH "DESCRIPTION"
+.sp
+tailspin is a command line tool that highlights log files.
+.SH "OPTIONS"
+.sp
+\fB\-f, \-\-follow\fP
+.RS 4
+Follow (tail) the contents of the file.
+Always true if opening a folder or using the \fI\-\-follow\-command\fP flag.
+.RE
+.sp
+\fB\-t, \-\-tail\fP
+.RS 4
+Start at the end of the file.
+Always true if opening a folder.
+.RE
+.sp
+\fB\-p, \-\-print\fP
+.RS 4
+Print the output to stdout instead of viewing the contents in the pager \fIless\fP.
+Always true if using stdin.
+.RE
+.sp
+\fB\-c, \-\-config\-path\fP \fICONFIG_PATH\fP
+.RS 4
+Specify the path to a custom configuration file.
+Defaults to \fIXDG_CONFIG_HOME/tailspin/config.toml\fP or \fI~/.config/tailspin/config.toml\fP if not set.
+.RE
+.sp
+\fB\-l, \-\-follow\-command\fP \fICOMMAND\fP
+.RS 4
+Continuously listen to stdout of the provided command.
+The command traps the interrupt signal to allow for cancelling and resuming follow mode while inside \fIless\fP.
+.RE
+.sp
+\fB\-\-disable\-builtin\-keywords\fP
+.RS 4
+Disables the highlighting of all builtin keyword groups (booleans, severity and REST).
+.RE
+.sp
+\fB\-\-disable\-booleans\fP
+.RS 4
+Disables the highlighting of booleans and nulls.
+.RE
+.sp
+\fB\-\-disable\-severity\fP
+.RS 4
+Disables the highlighting of severity levels.
+.RE
+.sp
+\fB\-\-disable\-rest\fP
+.RS 4
+Disables the highlighting of REST verbs.
+.RE
+.SH "SEE ALSO"
+.sp
+\fBless\fP(1), \fBtail\fP(1)
+.SH "ABOUT"
+.sp
+Ben Sadeh (github.com/bensadeh/tailspin)
+.sp
+Released under the MIT License
